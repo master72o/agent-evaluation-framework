@@ -1,9 +1,9 @@
-# AgentBench Works: Autonomous Multi-Step Agent Trajectory Benchmark (`agentbench-works`)
+# Agent Evaluation Framework: Autonomous Multi-Step Agent Trajectory Benchmark (`agent-evaluation-framework`)
 
 > Autonomous Multi-Step Agent Trajectory Benchmark & Self-Healing Error Recovery Observatory: Evaluating Tool Parameter Schema Compliance, Planning Efficiency, and Adaptive Error Recovery across 16 Enterprise Scenarios.
 
-[![Streamlit Studio](https://img.shields.io/badge/Streamlit-Studio_Live-FF4B4B.svg?logo=streamlit)](https://github.com/master72o/agentbench-works)
-[![CI](https://github.com/master72o/agentbench-works/actions/workflows/ci.yml/badge.svg)](https://github.com/master72o/agentbench-works/actions/workflows/ci.yml)
+[![Streamlit Studio](https://img.shields.io/badge/Streamlit-Studio_Live-FF4B4B.svg?logo=streamlit)](https://github.com/master72o/agent-evaluation-framework)
+[![CI](https://github.com/master72o/agent-evaluation-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/master72o/agent-evaluation-framework/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -16,7 +16,7 @@ Autonomous LLM agents fail predominantly due to **multi-step compounding errors*
 2. **Environmental Fragility**: Real-world software APIs fail unpredictably (HTTP 429 rate limits, gateway 504 timeouts, dead-letter queues, database lock contention). Without explicit self-reflection, agents enter runaway retry loops resubmitting identical failed inputs.
 3. **Cascading Failure Divergence**: Once an intermediate step returns an unhandled exception, downstream reasoning degenerates, producing corrupt outputs or abrupt task abandonment.
 
-**AgentBench Works** introduces an empirical, reproducible benchmarking observatory evaluating three agent architectures across **16 realistic multi-step enterprise workflows**:
+**Agent Evaluation Framework** introduces an empirical, reproducible benchmarking observatory evaluating three agent architectures across **16 realistic multi-step enterprise workflows**:
 - **`Agent_v1_ReAct_Baseline`**: Unstructured Reason + Act prompting.
 - **`Agent_v2_Structured_Tools`**: ReAct with Pydantic JSON Schema tool parameter contracts.
 - **`Agent_v3_Reflection_Recovery`**: Structured tool calling paired with an explicit Self-Reflection & Replanning recovery loop.
@@ -118,8 +118,8 @@ To enable live inference:
 
 ```bash
 # Clone repository
-git clone https://github.com/master72o/agentbench-works.git
-cd agentbench-works
+git clone https://github.com/master72o/agent-evaluation-framework.git
+cd agent-evaluation-framework
 
 # Install in editable mode
 pip install -e .
@@ -155,7 +155,7 @@ The interactive studio provides:
 ## 📁 Repository Structure
 
 ```
-agentbench-works/
+agent-evaluation-framework/
 ├── .github/workflows/ci.yml       # Automated GitHub Actions test workflow
 ├── agent_eval/                   # Core evaluation package
 │   ├── __init__.py
